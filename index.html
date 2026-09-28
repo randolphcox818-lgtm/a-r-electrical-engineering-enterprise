@@ -7,6 +7,7 @@
 
     <title>A&R Electrical Engineering Enterprise | Electrical Services in Guyana</title>
 
+    <meta name="google-site-verification" content="xrkwZljt6RbmpryaaYG9ajGp1hdQfnbrlow3mB_WiS8" />
     <meta name="description" content="A&R Electrical Engineering Enterprise provides electrical installations, solar energy solutions, industrial electrical systems, maintenance, and repair services throughout Guyana.">
     <meta name="keywords" content="Electrical Engineering Guyana, Solar Installation Guyana, Electrician Guyana, Industrial Electrical Services, A&R Electrical">
     <meta name="robots" content="index, follow">
@@ -19,337 +20,20 @@
     <meta property="og:description" content="Professional electrical installations, solar energy solutions, industrial electrical services, and maintenance in Guyana.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ar-electrical.vercel.app/">
+    <meta property="og:image" content="https://ar-electrical.vercel.app/images/hero.jpg">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="A&R Electrical Engineering Enterprise">
     <meta name="twitter:description" content="Professional electrical and solar services in Guyana.">
+    <meta name="twitter:image" content="https://ar-electrical.vercel.app/images/hero.jpg">
 
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <style>
-        /* ===============================
-        GLOBAL
-        ================================ */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #050816;
-            color: white;
-            transition: .4s;
-            overflow-x: hidden;
-        }
-
-        :root {
-            --gold: #ffc300;
-            --blue: #00c8ff;
-            --dark: #050816;
-            --card: #101a33;
-            --gray: #aeb6c1;
-        }
-
-        /* ===============================
-        LIGHT MODE
-        ================================ */
-        body.light {
-            background: #f4f4f4;
-            color: #111;
-        }
-
-        body.light .card,
-        body.light .box,
-        body.light .review {
-            background: white;
-            color: #111;
-        }
-
-        /* ===============================
-        NAVIGATION
-        ================================ */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 999;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 8%;
-            background: rgba(5, 8, 22, .85);
-            backdrop-filter: blur(15px);
-            border-bottom: 1px solid #00c8ff44;
-        }
-
-        .logo-container {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .logo {
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--gold);
-            line-height: 1.2;
-        }
-
-        .slogan {
-            font-size: 12px;
-            font-weight: 300;
-            color: var(--blue);
-            margin-top: 2px;
-            letter-spacing: 0.5px;
-        }
-
-        nav ul {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: .3s;
-        }
-
-        nav a:hover {
-            color: var(--blue);
-        }
-
-        #theme {
-            background: var(--gold);
-            border: none;
-            padding: 10px 15px;
-            border-radius: 30px;
-            cursor: pointer;
-        }
-
-        /* ===============================
-        HERO
-        ================================ */
-        .hero {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 100px 10%;
-            background: linear-gradient(rgba(5, 8, 22, .75), rgba(5, 8, 22, .95)),
-                        url("https://images.unsplash.com/photo-1621905252507-b35492cc74b4");
-            background-size: cover;
-            background-position: center;
-        }
-
-        .hero h1 {
-            font-size: 65px;
-            line-height: 1.2;
-        }
-
-        .hero span {
-            display: block;
-            color: var(--blue);
-            margin-top: 15px;
-        }
-
-        .hero p {
-            font-size: 20px;
-            color: var(--gray);
-            margin: 30px auto;
-            max-width: 800px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 15px 35px;
-            margin: 10px;
-            border-radius: 50px;
-            background: linear-gradient(45deg, #ffc300, #ff8800);
-            color: black;
-            text-decoration: none;
-            font-weight: bold;
-            transition: .4s;
-        }
-
-        .btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 25px var(--gold);
-        }
-
-        .whatsapp {
-            background: linear-gradient(45deg, #25D366, #00ff88);
-            color: white;
-        }
-
-        /* ===============================
-        SECTIONS
-        ================================ */
-        section {
-            padding: 100px 8%;
-        }
-
-        h2 {
-            text-align: center;
-            font-size: 40px;
-            margin-bottom: 50px;
-            color: var(--gold);
-        }
-
-        /* ===============================
-        CARDS & ABOUT
-        ================================ */
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, .08);
-            padding: 35px;
-            border-radius: 20px;
-            border: 1px solid #00c8ff55;
-            transition: .4s;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 30px #00c8ff;
-        }
-
-        .card i {
-            font-size: 45px;
-            color: var(--blue);
-            margin-bottom: 20px;
-        }
-
-        .card h3 {
-            color: var(--gold);
-            margin-bottom: 15px;
-        }
-
-        .about {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
-        }
-
-        .box {
-            background: rgba(255, 255, 255, .08);
-            padding: 30px;
-            border-radius: 20px;
-            border: 1px solid #00c8ff55;
-            text-align: center;
-        }
-
-        .stats {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .stats h3 {
-            font-size: 36px;
-            color: var(--gold);
-        }
-
-        /* ===============================
-        FORM STYLING
-        ================================ */
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        form input, form textarea {
-            padding: 12px 15px;
-            border-radius: 8px;
-            border: 1px solid #00c8ff55;
-            background: rgba(255, 255, 255, 0.05);
-            color: white;
-            font-family: inherit;
-        }
-
-        form textarea {
-            height: 100px;
-            resize: vertical;
-        }
-
-        form button {
-            padding: 12px;
-            border: none;
-            border-radius: 25px;
-            background: var(--gold);
-            color: black;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        form button:hover {
-            background: #ff8800;
-        }
-
-        /* ===============================
-        FLOATING BUTTONS & FOOTER
-        ================================ */
-        .float-whatsapp {
-            position: fixed;
-            left: 25px;
-            bottom: 25px;
-            width: 65px;
-            height: 65px;
-            border-radius: 50%;
-            background: #25D366;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 35px;
-            z-index: 999;
-            box-shadow: 0 0 25px #25D366;
-            text-decoration: none;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 8%;
-            background: rgba(5, 8, 22, .95);
-            border-top: 1px solid #00c8ff44;
-            line-height: 1.8;
-        }
-
-        footer h3 {
-            color: var(--gold);
-            margin-bottom: 5px;
-        }
-
-        footer .footer-slogan {
-            color: var(--blue);
-            font-size: 14px;
-            font-style: italic;
-            margin-bottom: 10px;
-        }
-
-        /* Tawk.to is positioned independently by Tawk.to */
-        iframe[title*="chat widget"] {
-            z-index: 1000 !important;
-        }
-    </style>
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -446,7 +130,7 @@
     </section>
 
     <!-- WHY CHOOSE US -->
-    <section>
+    <section id="why-us">
         <h2>Why Choose A&R</h2>
         <div class="cards">
             <div class="card">
@@ -490,7 +174,7 @@
     </section>
 
     <!-- REVIEWS -->
-    <section>
+    <section id="reviews">
         <h2>Customer Reviews</h2>
         <div class="cards">
             <div class="card">
@@ -523,11 +207,12 @@
             </div>
             <div class="card">
                 <h3>Request A Quote</h3>
-                <form id="quoteForm">
-                    <input type="text" id="name" placeholder="Your Name" required>
-                    <input type="tel" id="phone" placeholder="Phone Number" required>
-                    <input type="email" id="email" placeholder="Email Address" required>
-                    <textarea id="message" placeholder="Describe your electrical project"></textarea>
+                <form id="quoteForm" action="https://formspree.io/f/xaenayqo" method="POST">
+                    <input type="hidden" name="_next" value="https://ar-electrical.vercel.app/#contact">
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+                    <input type="email" name="_replyto" id="email" placeholder="Email Address" required>
+                    <textarea name="message" id="message" placeholder="Describe your electrical project" required></textarea>
                     <button type="submit">Send Request</button>
                 </form>
             </div>
@@ -571,14 +256,6 @@
             document.body.classList.add("light");
             themeButton.innerHTML = "☀️";
         }
-
-        // CONTACT FORM
-        document.getElementById("quoteForm").addEventListener("submit", function(e) {
-            e.preventDefault();
-            let name = document.getElementById("name").value;
-            alert("Thank you " + name + "! A&R Electrical Engineering Enterprise will contact you shortly.");
-            this.reset();
-        });
 
         // CURRENT YEAR
         document.getElementById("year").innerHTML = "© " + new Date().getFullYear() + " A&R Electrical Engineering Enterprise. All Rights Reserved.";
@@ -644,12 +321,12 @@
 
         typeEffect();
     </script>
+
     <!-- Start of Tawk.to Script -->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {};
         var Tawk_LoadStart = new Date();
 
-        // Keep Tawk.to above the floating WhatsApp button.
         Tawk_API.onLoad = function () {
             Tawk_API.customStyle({
                 visibility: {

@@ -3,1168 +3,427 @@
    COMPLETE FUTURISTIC STYLE CSS
 ====================================================== */
 
-
 /* RESET */
-
-*{
-
-margin:0;
-padding:0;
-box-sizing:border-box;
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-
-html{
-
-scroll-behavior:smooth;
-
+html {
+    scroll-behavior: smooth;
 }
 
-
-
-body{
-
-font-family:'Poppins',sans-serif;
-
-background:#050816;
-
-color:#ffffff;
-
-overflow-x:hidden;
-
-transition:.4s;
-
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #050816;
+    color: #ffffff;
+    overflow-x: hidden;
+    transition: .4s;
 }
-
-
-
 
 /* ===============================
    COLOR SYSTEM
 ================================ */
-
-
-:root{
-
---bg:#050816;
-
---card:#101a33;
-
---blue:#00c8ff;
-
---gold:#ffc300;
-
---white:#ffffff;
-
---gray:#aeb6c1;
-
---shadow:
-0 0 30px rgba(0,200,255,.25);
-
+:root {
+    --bg: #050816;
+    --card: #101a33;
+    --blue: #00c8ff;
+    --gold: #ffc300;
+    --white: #ffffff;
+    --gray: #aeb6c1;
+    --shadow: 0 0 30px rgba(0, 200, 255, .25);
 }
-
-
-
-
-
 
 /* ===============================
    LIGHT MODE
 ================================ */
-
-
-body.light{
-
-background:#f4f6f9;
-
-color:#111;
-
+body.light {
+    background: #f4f6f9;
+    color: #111;
 }
-
-
 
 body.light .card,
-body.light .stats div,
-body.light .review{
-
-background:white;
-
-color:#111;
-
+body.light .box,
+body.light .review {
+    background: white;
+    color: #111;
 }
 
-
-
-body.light nav{
-
-background:
-rgba(255,255,255,.85);
-
+body.light nav {
+    background: rgba(255, 255, 255, .85);
 }
 
-
-
-body.light footer{
-
-background:#ddd;
-
-color:#222;
-
+body.light footer {
+    background: #ddd;
+    color: #222;
 }
-
-
-
-
 
 /* ===============================
    NAVIGATION
 ================================ */
-
-
-header{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-z-index:999;
-
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
 }
 
-
-
-nav{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:20px 8%;
-
-
-background:
-
-rgba(5,8,22,.85);
-
-
-backdrop-filter:
-
-blur(15px);
-
-
-border-bottom:
-
-1px solid rgba(0,200,255,.2);
-
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: rgba(5, 8, 22, .85);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(0, 200, 255, .2);
 }
 
-
-
-.logo{
-
-font-size:22px;
-
-font-weight:700;
-
-color:#ffc300;
-
+.logo-container {
+    display: flex;
+    flex-direction: column;
 }
 
-
-
-nav ul{
-
-display:flex;
-
-gap:30px;
-
-list-style:none;
-
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.2;
 }
 
-
-
-nav ul a{
-
-color:white;
-
-text-decoration:none;
-
-font-weight:500;
-
-transition:.3s;
-
+.slogan {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--blue);
+    margin-top: 2px;
+    letter-spacing: 0.5px;
 }
 
-
-
-nav ul a:hover{
-
-color:#00c8ff;
-
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
 }
 
-
-
-
-
-#theme{
-
-background:#ffc300;
-
-border:none;
-
-padding:10px 18px;
-
-border-radius:30px;
-
-cursor:pointer;
-
-font-size:18px;
-
+nav ul a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .3s;
 }
 
+nav ul a:hover {
+    color: var(--blue);
+}
 
-
-
-
-
-
+#theme {
+    background: var(--gold);
+    border: none;
+    padding: 10px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+}
 
 /* ===============================
    HERO SECTION
 ================================ */
-
-
-.hero{
-
-height:100vh;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-text-align:center;
-
-padding:120px 10%;
-
-
-background:
-
-linear-gradient(
-
-rgba(5,8,22,.75),
-
-rgba(5,8,22,.95)
-
-),
-
-url("../images/hero.jpg");
-
-
-background-size:cover;
-
-background-position:center;
-
-position:relative;
-
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 10%;
+    background: linear-gradient(rgba(5, 8, 22, .75), rgba(5, 8, 22, .95)),
+                url("images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
-
-
-
-
-.hero:before{
-
-content:"";
-
-position:absolute;
-
-width:400px;
-
-height:400px;
-
-background:#00c8ff;
-
-filter:blur(180px);
-
-opacity:.25;
-
+.hero:before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #00c8ff;
+    filter: blur(180px);
+    opacity: .25;
 }
 
-
-
-
-.hero div{
-
-position:relative;
-
-z-index:2;
-
+.hero div {
+    position: relative;
+    z-index: 2;
 }
 
-
-
-
-.hero h1{
-
-font-size:65px;
-
-line-height:1.2;
-
-font-weight:700;
-
+.hero h1 {
+    font-size: 65px;
+    line-height: 1.2;
+    font-weight: 700;
 }
 
-
-
-.hero span{
-
-display:block;
-
-color:#00c8ff;
-
-margin-top:15px;
-
+.hero span {
+    display: block;
+    color: #00c8ff;
+    margin-top: 15px;
 }
 
-
-
-.hero p{
-
-max-width:800px;
-
-margin:30px auto;
-
-font-size:20px;
-
-color:#aeb6c1;
-
+.hero p {
+    max-width: 800px;
+    margin: 30px auto;
+    font-size: 20px;
+    color: #aeb6c1;
 }
-
-
-
-
 
 /* BUTTONS */
-
-
-.btn{
-
-display:inline-block;
-
-padding:15px 35px;
-
-margin:10px;
-
-border-radius:50px;
-
-background:
-
-linear-gradient(
-45deg,
-#ffc300,
-#ff8800
-);
-
-
-color:black;
-
-text-decoration:none;
-
-font-weight:700;
-
-transition:.4s;
-
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    margin: 10px;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #ffc300, #ff8800);
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .4s;
 }
 
-
-
-.btn:hover{
-
-transform:
-
-translateY(-5px);
-
-box-shadow:
-
-0 0 25px #ffc300;
-
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #ffc300;
 }
 
-
-
-.whatsapp{
-
-background:
-
-linear-gradient(
-45deg,
-#25D366,
-#00ff88
-);
-
-
-color:white;
-
+.whatsapp {
+    background: linear-gradient(45deg, #25D366, #00ff88);
+    color: white;
 }
-
-
-
-
-
-
 
 /* ===============================
    GENERAL SECTIONS
 ================================ */
-
-
-section{
-
-padding:100px 8%;
-
+section {
+    padding: 100px 8%;
 }
 
-
-
-h2{
-
-text-align:center;
-
-font-size:42px;
-
-margin-bottom:60px;
-
-color:#ffc300;
-
+h2 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 60px;
+    color: #ffc300;
 }
 
-
-
-
-p{
-
-line-height:1.8;
-
+p {
+    line-height: 1.8;
 }
-
-
-
-
-
-
 
 /* ===============================
-   SERVICE CARDS
+   CARDS & ABOUT
 ================================ */
-
-
-.cards{
-
-display:grid;
-
-grid-template-columns:
-
-repeat(auto-fit,minmax(260px,1fr));
-
-
-gap:30px;
-
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
 }
 
-
-
-
-
-.card{
-
-background:
-
-rgba(255,255,255,.08);
-
-
-padding:40px 30px;
-
-
-border-radius:20px;
-
-
-border:
-
-1px solid rgba(0,200,255,.25);
-
-
-backdrop-filter:
-
-blur(15px);
-
-
-transition:.4s;
-
+.card {
+    background: rgba(255, 255, 255, .08);
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 200, 255, .25);
+    backdrop-filter: blur(15px);
+    transition: .4s;
 }
 
-
-
-
-
-.card:hover{
-
-transform:
-
-translateY(-12px);
-
-
-box-shadow:
-
-0 0 35px rgba(0,200,255,.35);
-
-
-border-color:#00c8ff;
-
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 0 35px rgba(0, 200, 255, .35);
+    border-color: #00c8ff;
 }
 
-
-
-
-.card i{
-
-font-size:45px;
-
-color:#00c8ff;
-
-margin-bottom:20px;
-
+.card i {
+    font-size: 45px;
+    color: #00c8ff;
+    margin-bottom: 20px;
 }
 
-
-
-.card h3{
-
-color:#ffc300;
-
-margin-bottom:15px;
-
+.card h3 {
+    color: #ffc300;
+    margin-bottom: 15px;
 }
 
+.about {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
 
+.box {
+    background: rgba(255, 255, 255, .08);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 200, 255, .2);
+    text-align: center;
+}
 
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-
-
-
+.stats h3 {
+    font-size: 40px;
+    color: #00c8ff;
+}
 
 /* ===============================
-   ABOUT SECTION
+   FORM STYLING
 ================================ */
-
-
-.about{
-
-display:grid;
-
-grid-template-columns:
-
-1fr 1fr;
-
-gap:50px;
-
-align-items:center;
-
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-
-
-
-.about p{
-
-color:#aeb6c1;
-
-margin-bottom:20px;
-
+form input,
+form textarea {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 200, 255, .3);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
 }
 
-
-
-
-.stats{
-
-display:flex;
-
-gap:20px;
-
+form textarea {
+    height: 120px;
+    resize: vertical;
 }
 
-
-
-
-.stats div{
-
-background:
-
-rgba(255,255,255,.08);
-
-
-padding:30px;
-
-border-radius:20px;
-
-
-text-align:center;
-
-
-border:
-
-1px solid rgba(0,200,255,.2);
-
+form button {
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: var(--gold);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-
-
-
-.stats h3{
-
-font-size:40px;
-
-color:#00c8ff;
-
+form button:hover {
+    background: #ff8800;
 }
-
-
-
-
-
-
-/* ===============================
-   PROJECTS
-================================ */
-
-
-.projects{
-
-display:grid;
-
-grid-template-columns:
-
-repeat(auto-fit,minmax(250px,1fr));
-
-
-gap:30px;
-
-}
-
-
-
-
-
-.project{
-
-height:230px;
-
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-
-border-radius:20px;
-
-
-background:
-
-linear-gradient(
-135deg,
-#101a33,
-#152d50
-);
-
-
-
-border:
-
-1px solid #00c8ff;
-
-
-font-size:22px;
-
-
-font-weight:bold;
-
-
-transition:.4s;
-
-}
-
-
-
-.project:hover{
-
-box-shadow:
-
-0 0 35px #00c8ff;
-
-
-transform:
-
-scale(1.05);
-
-}
-
-
-
-
-
-
-
-/* ===============================
-   REVIEWS
-================================ */
-
-
-.reviews{
-
-display:grid;
-
-grid-template-columns:
-
-repeat(auto-fit,minmax(250px,1fr));
-
-
-gap:30px;
-
-}
-
-
-
-
-.review{
-
-background:
-
-rgba(255,255,255,.08);
-
-
-padding:35px;
-
-
-border-radius:20px;
-
-
-border:
-
-1px solid rgba(255,195,0,.4);
-
-
-}
-
-
-
-.review:first-letter{
-
-color:#ffc300;
-
-}
-
-
-
-
-
-
-
-/* ===============================
-   CONTACT
-================================ */
-
-
-.contact{
-
-display:grid;
-
-grid-template-columns:
-
-1fr 1fr;
-
-
-gap:50px;
-
-}
-
-
-
-
-
-.contact-info p{
-
-margin:20px 0;
-
-}
-
-
-
-
-
-.contact-info a{
-
-color:#00c8ff;
-
-text-decoration:none;
-
-}
-
-
-
-
-form{
-
-display:flex;
-
-flex-direction:column;
-
-}
-
-
-
-
-
-input,
-textarea{
-
-
-padding:15px;
-
-margin-bottom:20px;
-
-
-background:#101a33;
-
-
-border:
-
-1px solid rgba(0,200,255,.3);
-
-
-border-radius:10px;
-
-
-color:white;
-
-
-font-size:16px;
-
-
-}
-
-
-
-
-
-textarea{
-
-height:160px;
-
-resize:none;
-
-}
-
-
-
-
-
-button{
-
-background:#ffc300;
-
-padding:15px;
-
-border:none;
-
-border-radius:10px;
-
-font-weight:bold;
-
-cursor:pointer;
-
-}
-
-
-
-
-
-
-
 
 /* ===============================
    FLOATING WHATSAPP
 ================================ */
-
-
-.float{
-
-
-position:fixed;
-
-
-right:25px;
-
-
-bottom:25px;
-
-
-width:70px;
-
-
-height:70px;
-
-
-border-radius:50%;
-
-
-background:#25D366;
-
-
-color:white;
-
-
-display:flex;
-
-
-justify-content:center;
-
-
-align-items:center;
-
-
-font-size:35px;
-
-
-z-index:999;
-
-
-box-shadow:
-
-0 0 25px #25D366;
-
-
-animation:pulse 2s infinite;
-
+.float-whatsapp {
+    position: fixed;
+    left: 25px;
+    bottom: 25px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #25D366;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    z-index: 999;
+    box-shadow: 0 0 25px #25D366;
+    text-decoration: none;
+    animation: pulse 2s infinite;
 }
 
-
-
-
-@keyframes pulse{
-
-
-0%{
-
-transform:scale(1);
-
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
 }
-
-
-50%{
-
-transform:scale(1.1);
-
-}
-
-
-100%{
-
-transform:scale(1);
-
-}
-
-
-}
-
-
-
-
-
-
-
 
 /* ===============================
    FOOTER
 ================================ */
-
-
-footer{
-
-background:#02040c;
-
-padding:50px 20px;
-
-text-align:center;
-
-color:#aeb6c1;
-
+footer {
+    text-align: center;
+    padding: 40px 8%;
+    background: rgba(5, 8, 22, .95);
+    border-top: 1px solid rgba(0, 200, 255, .2);
+    line-height: 1.8;
 }
 
-
-
-footer h3{
-
-color:#ffc300;
-
-margin-bottom:20px;
-
+footer h3 {
+    color: var(--gold);
+    margin-bottom: 5px;
 }
 
-
-
-
-
-
-
-
-/* ===============================
-   ANIMATIONS
-================================ */
-
-
-@keyframes glow{
-
-
-from{
-
-box-shadow:
-0 0 10px #00c8ff;
-
+footer .footer-slogan {
+    color: var(--blue);
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 10px;
 }
 
-
-to{
-
-box-shadow:
-0 0 40px #00c8ff;
-
+/* Tawk.to positioning */
+iframe[title*="chat widget"] {
+    z-index: 1000 !important;
 }
-
-
-}
-
-
-
-
-
-
-
 
 /* ===============================
    MOBILE RESPONSIVE
 ================================ */
+@media(max-width: 900px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
 
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-@media(max-width:900px){
+    .hero h1 {
+        font-size: 40px;
+    }
 
+    .hero p {
+        font-size: 16px;
+    }
 
+    .about {
+        grid-template-columns: 1fr;
+    }
 
-nav{
+    .stats {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
-flex-direction:column;
-
-gap:20px;
-
+    h2 {
+        font-size: 32px;
+    }
 }
 
+@media(max-width: 500px) {
+    .logo {
+        font-size: 18px;
+    }
 
+    .btn {
+        padding: 12px 25px;
+    }
 
-nav ul{
+    .hero {
+        padding-top: 140px;
+    }
 
-flex-wrap:wrap;
-
-justify-content:center;
-
-}
-
-
-
-.hero h1{
-
-font-size:40px;
-
-}
-
-
-
-.hero p{
-
-font-size:16px;
-
-}
-
-
-
-
-.about,
-.contact{
-
-grid-template-columns:1fr;
-
-}
-
-
-
-
-.stats{
-
-flex-direction:column;
-
-}
-
-
-
-
-h2{
-
-font-size:32px;
-
-}
-
-
-
-}
-
-
-
-@media(max-width:500px){
-
-
-.logo{
-
-font-size:18px;
-
-}
-
-
-
-.btn{
-
-padding:12px 25px;
-
-}
-
-
-
-.hero{
-
-padding-top:150px;
-
-}
-
-
+    .stats {
+        flex-direction: column;
+    }
 }
