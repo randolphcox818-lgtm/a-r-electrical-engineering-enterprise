@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A&R Electrical Engineering Enterprise | Electrical Services in Guyana</title>
+
+    <meta name="description" content="A&R Electrical Engineering Enterprise provides electrical installations, solar energy solutions, industrial electrical systems, maintenance, and repair services throughout Guyana.">
+    <meta name="keywords" content="Electrical Engineering Guyana, Solar Installation Guyana, Electrician Guyana, Industrial Electrical Services, A&R Electrical">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="A&R Electrical Engineering Enterprise">
+
+    <link rel="canonical" href="https://ar-electrical.vercel.app/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="A&R Electrical Engineering Enterprise">
+    <meta property="og:description" content="Professional electrical installations, solar energy solutions, industrial electrical services, and maintenance in Guyana.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ar-electrical.vercel.app/">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="A&R Electrical Engineering Enterprise">
+    <meta name="twitter:description" content="Professional electrical and solar services in Guyana.">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* ===============================
+        GLOBAL
+        ================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #050816;
+            color: white;
+            transition: .4s;
+            overflow-x: hidden;
+        }
+
+        :root {
+            --gold: #ffc300;
+            --blue: #00c8ff;
+            --dark: #050816;
+            --card: #101a33;
+            --gray: #aeb6c1;
+        }
+
+        /* ===============================
+        LIGHT MODE
+        ================================ */
+        body.light {
+            background: #f4f4f4;
+            color: #111;
+        }
+
+        body.light .card,
+        body.light .box,
+        body.light .review {
+            background: white;
+            color: #111;
+        }
+
+        /* ===============================
+        NAVIGATION
+        ================================ */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            background: rgba(5, 8, 22, .85);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid #00c8ff44;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1.2;
+        }
+
+        .slogan {
+            font-size: 12px;
+            font-weight: 300;
+            color: var(--blue);
+            margin-top: 2px;
+            letter-spacing: 0.5px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: var(--blue);
+        }
+
+        #theme {
+            background: var(--gold);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        /* ===============================
+        HERO
+        ================================ */
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 10%;
+            background: linear-gradient(rgba(5, 8, 22, .75), rgba(5, 8, 22, .95)),
+                        url("https://images.unsplash.com/photo-1621905252507-b35492cc74b4");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            line-height: 1.2;
+        }
+
+        .hero span {
+            display: block;
+            color: var(--blue);
+            margin-top: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: var(--gray);
+            margin: 30px auto;
+            max-width: 800px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            margin: 10px;
+            border-radius: 50px;
+            background: linear-gradient(45deg, #ffc300, #ff8800);
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            transition: .4s;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px var(--gold);
+        }
+
+        .whatsapp {
+            background: linear-gradient(45deg, #25D366, #00ff88);
+            color: white;
+        }
+
+        /* ===============================
+        SECTIONS
+        ================================ */
+        section {
+            padding: 100px 8%;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 50px;
+            color: var(--gold);
+        }
+
+        /* ===============================
+        CARDS & ABOUT
+        ================================ */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, .08);
+            padding: 35px;
+            border-radius: 20px;
+            border: 1px solid #00c8ff55;
+            transition: .4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px #00c8ff;
+        }
+
+        .card i {
+            font-size: 45px;
+            color: var(--blue);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .box {
+            background: rgba(255, 255, 255, .08);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #00c8ff55;
+            text-align: center;
+        }
+
+        .stats {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .stats h3 {
+            font-size: 36px;
+            color: var(--gold);
+        }
+
+        /* ===============================
+        FORM STYLING
+        ================================ */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form input, form textarea {
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid #00c8ff55;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-family: inherit;
+        }
+
+        form textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        form button {
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            background: var(--gold);
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        form button:hover {
+            background: #ff8800;
+        }
+
+        /* ===============================
+        FLOATING BUTTONS & FOOTER
+        ================================ */
+        .float-whatsapp {
+            position: fixed;
+            left: 25px;
+            bottom: 25px;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            z-index: 999;
+            box-shadow: 0 0 25px #25D366;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 8%;
+            background: rgba(5, 8, 22, .95);
+            border-top: 1px solid #00c8ff44;
+            line-height: 1.8;
+        }
+
+        footer h3 {
+            color: var(--gold);
+            margin-bottom: 5px;
+        }
+
+        footer .footer-slogan {
+            color: var(--blue);
+            font-size: 14px;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        /* Tawk.to is positioned independently by Tawk.to */
+        iframe[title*="chat widget"] {
+            z-index: 1000 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo-container">
+                <div class="logo">
+                    ⚡ A&R Electrical Engineering Enterprise
+                </div>
+                <div class="slogan">
+                    Empowering your future one connection at a time
+                </div>
+            </div>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme">🌙</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Powering The Future With <span>A&R Electrical Engineering</span></h1>
+            <p>
+                Professional electrical engineering solutions.<br>
+                ⚡ Electrical Installation | ☀ Solar Systems | 🏭 Industrial Services
+            </p>
+            <a class="btn" href="tel:+5926846004">
+                <i class="fa fa-phone"></i> Call Now
+            </a>
+            <a class="btn whatsapp" href="https://wa.me/5926846004" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp Quote
+            </a>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <h2>Our Engineering Services</h2>
+        <div class="cards">
+            <div class="card">
+                <i class="fa fa-bolt"></i>
+                <h3>Electrical Installation</h3>
+                <p>Residential wiring, commercial electrical installations, lighting systems, breaker panels and electrical upgrades.</p>
+            </div>
+            <div class="card">
+                <i class="fa fa-solar-panel"></i>
+                <h3>Solar Energy Solutions</h3>
+                <p>Solar panel installation, backup power systems, energy saving solutions and consultations.</p>
+            </div>
+            <div class="card">
+                <i class="fa fa-industry"></i>
+                <h3>Industrial Electrical Systems</h3>
+                <p>Industrial wiring, control systems, automation support and electrical maintenance.</p>
+            </div>
+            <div class="card">
+                <i class="fa fa-screwdriver-wrench"></i>
+                <h3>Repairs & Maintenance</h3>
+                <p>Fault finding, inspections, troubleshooting and emergency electrical repairs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2>About A&R Electrical Engineering Enterprise</h2>
+        <div class="about">
+            <div class="box">
+                <p>A&R Electrical Engineering Enterprise is a modern engineering company focused on providing safe, efficient and reliable electrical solutions.</p>
+                <br>
+                <p>We specialize in residential, commercial, industrial and renewable energy projects.</p>
+                <br>
+                <p>Our mission is to deliver quality workmanship using modern technology and professional engineering standards.</p>
+            </div>
+            <div class="stats">
+                <div class="box">
+                    <h3>500+</h3>
+                    <p>Projects</p>
+                </div>
+                <div class="box">
+                    <h3>24/7</h3>
+                    <p>Support</p>
+                </div>
+                <div class="box">
+                    <h3>100%</h3>
+                    <p>Commitment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section>
+        <h2>Why Choose A&R</h2>
+        <div class="cards">
+            <div class="card">
+                <i class="fa fa-shield"></i>
+                <h3>Safety First</h3>
+                <p>Professional electrical work with safety as the highest priority.</p>
+            </div>
+            <div class="card">
+                <i class="fa fa-microchip"></i>
+                <h3>Modern Technology</h3>
+                <p>Using modern tools and engineering methods for reliable results.</p>
+            </div>
+            <div class="card">
+                <i class="fa fa-clock"></i>
+                <h3>Reliable Service</h3>
+                <p>Fast response, quality work and dependable solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2>Our Projects</h2>
+        <div class="cards">
+            <div class="card">
+                <i class="fa fa-house"></i>
+                <h3>Residential Projects</h3>
+                <p>Complete home electrical installations, upgrades and repairs.</p>
+            </div>
+            <div class="card">
+                <i class="fa fa-solar-panel"></i>
+                <h3>Solar Installations</h3>
+                <p>Clean energy systems designed for homes and businesses.</p>
+            </div>
+            <div class="card">
+                <i class="fa fa-industry"></i>
+                <h3>Industrial Projects</h3>
+                <p>Electrical systems for industrial and commercial applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section>
+        <h2>Customer Reviews</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>⭐⭐⭐⭐⭐</h3>
+                <p>"Excellent service and professional electrical workmanship."</p>
+            </div>
+            <div class="card">
+                <h3>⭐⭐⭐⭐⭐</h3>
+                <p>"Reliable team with great attention to detail."</p>
+            </div>
+            <div class="card">
+                <h3>⭐⭐⭐⭐⭐</h3>
+                <p>"Great experience with our electrical and solar installation."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <h2>Contact A&R Electrical Engineering Enterprise</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Get In Touch</h3>
+                <p>📞 Call / WhatsApp</p>
+                <p><a href="tel:+5926846004" style="color:var(--blue);">+592 684-6004</a></p>
+                <p><a href="tel:+5927326604" style="color:var(--blue);">+592 732-6604</a></p>
+                <p>✉ Email</p>
+                <p><a href="mailto:randolphcox818@gmail.com" style="color:var(--blue);">randolphcox818@gmail.com</a></p>
+                <p>📍 Guyana</p>
+            </div>
+            <div class="card">
+                <h3>Request A Quote</h3>
+                <form id="quoteForm">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="tel" id="phone" placeholder="Phone Number" required>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                    <textarea id="message" placeholder="Describe your electrical project"></textarea>
+                    <button type="submit">Send Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHATSAPP BUTTON -->
+    <a href="https://wa.me/5926846004" target="_blank" class="float-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- FOOTER -->
+    <footer>
+        <h3>⚡ A&R Electrical Engineering Enterprise</h3>
+        <p class="footer-slogan">"Empowering your future one connection at a time"</p>
+        <p>Electrical • Solar • Industrial • Engineering</p>
+        <p>📞 +592 684-6004 | +592 732-6604</p>
+        <p>✉ randolphcox818@gmail.com</p>
+        <p id="year"></p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // DARK MODE
+        const themeButton = document.getElementById("theme");
+
+        themeButton.onclick = function() {
+            document.body.classList.toggle("light");
+
+            if (document.body.classList.contains("light")) {
+                localStorage.setItem("theme", "light");
+                themeButton.innerHTML = "☀️";
+            } else {
+                localStorage.setItem("theme", "dark");
+                themeButton.innerHTML = "🌙";
+            }
+        };
+
+        // LOAD SAVED THEME
+        if (localStorage.getItem("theme") == "light") {
+            document.body.classList.add("light");
+            themeButton.innerHTML = "☀️";
+        }
+
+        // CONTACT FORM
+        document.getElementById("quoteForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            let name = document.getElementById("name").value;
+            alert("Thank you " + name + "! A&R Electrical Engineering Enterprise will contact you shortly.");
+            this.reset();
+        });
+
+        // CURRENT YEAR
+        document.getElementById("year").innerHTML = "© " + new Date().getFullYear() + " A&R Electrical Engineering Enterprise. All Rights Reserved.";
+
+        // SCROLL ANIMATION
+        const elements = document.querySelectorAll(".card, section");
+
+        function reveal() {
+            elements.forEach(element => {
+                let position = element.getBoundingClientRect().top;
+                if (position < window.innerHeight - 100) {
+                    element.style.opacity = "1";
+                    element.style.transform = "translateY(0)";
+                }
+            });
+        }
+
+        elements.forEach(element => {
+            element.style.opacity = "0";
+            element.style.transform = "translateY(40px)";
+            element.style.transition = "0.8s ease";
+        });
+
+        window.addEventListener("scroll", reveal);
+        reveal();
+
+        // HERO TYPING EFFECT
+        const words = [
+            "Electrical Engineering",
+            "Solar Energy Solutions",
+            "Industrial Systems",
+            "Smart Power Technology"
+        ];
+
+        let word = 0;
+        let letter = 0;
+        let deleting = false;
+        const typing = document.querySelector(".hero span");
+
+        function typeEffect() {
+            if (!typing) return;
+            let current = words[word];
+
+            if (!deleting) {
+                typing.textContent = current.substring(0, letter++);
+                if (letter > current.length) {
+                    deleting = true;
+                    setTimeout(typeEffect, 1200);
+                    return;
+                }
+            } else {
+                typing.textContent = current.substring(0, letter--);
+                if (letter == 0) {
+                    deleting = false;
+                    word++;
+                    if (word >= words.length) {
+                        word = 0;
+                    }
+                }
+            }
+            setTimeout(typeEffect, 100);
+        }
+
+        typeEffect();
+    </script>
+    <!-- Start of Tawk.to Script -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {};
+        var Tawk_LoadStart = new Date();
+
+        // Keep Tawk.to above the floating WhatsApp button.
+        Tawk_API.onLoad = function () {
+            Tawk_API.customStyle({
+                visibility: {
+                    desktop: {
+                        position: 'br',
+                        xOffset: 25,
+                        yOffset: 25
+                    },
+                    mobile: {
+                        position: 'br',
+                        xOffset: 15,
+                        yOffset: 25
+                    }
+                }
+            });
+        };
+
+        (function () {
+            var s1 = document.createElement("script");
+            var s0 = document.getElementsByTagName("script")[0];
+
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/6ab52ea6a23cc0344792b9b0/1k39rsfah';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!-- End of Tawk.to Script -->
+
+</body>
+</html>
