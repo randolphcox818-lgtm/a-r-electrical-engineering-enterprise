@@ -369,6 +369,19 @@ footer .footer-slogan {
     margin-bottom: 10px;
 }
 
+footer .footer-badge {
+    margin: 20px 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footer-badge img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Tawk.to positioning */
 iframe[title*="chat widget"] {
     z-index: 1000 !important;
