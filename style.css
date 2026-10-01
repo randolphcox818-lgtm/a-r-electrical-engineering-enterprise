@@ -387,6 +387,35 @@ iframe[title*="chat widget"] {
     z-index: 1000 !important;
 }
 
+
+/* CLICKABLE SERVICE & PROJECT CARDS */
+.card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+}
+
+.card-link .card {
+    height: 100%;
+    cursor: pointer;
+}
+
+.card-link .card h3,
+.card-link .card p {
+    color: inherit;
+}
+
+.card-link .card h3 {
+    color: var(--gold);
+}
+
+.card-link:hover .card {
+    transform: translateY(-12px);
+    box-shadow: 0 0 35px rgba(0, 200, 255, .35);
+    border-color: #00c8ff;
+}
+
 /* ===============================
    MOBILE RESPONSIVE
 ================================ */
