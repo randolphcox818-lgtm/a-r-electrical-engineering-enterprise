@@ -90,6 +90,8 @@ nav {
     font-weight: 700;
     color: var(--gold);
     line-height: 1.2;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .slogan {

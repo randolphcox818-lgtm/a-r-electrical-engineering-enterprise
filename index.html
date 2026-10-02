@@ -8,8 +8,8 @@
     <title>A&R Electrical Engineering Enterprise | Electrical Services in Guyana</title>
 
     <meta name="google-site-verification" content="xrkwZljt6RbmpryaaYG9ajGp1hdQfnbrlow3mB_WiS8" />
-    <meta name="description" content="A&R Electrical Engineering Enterprise provides electrical installations, solar energy solutions, industrial electrical systems, maintenance, and repair services throughout Guyana.">
-    <meta name="keywords" content="Electrical Engineering Guyana, Solar Installation Guyana, Electrician Guyana, Industrial Electrical Services, A&R Electrical">
+    <meta name="description" content="A&R Electrical Engineering Enterprise provides electrical installations, solar energy solutions, Commercial electrical systems, maintenance, and repair services throughout Guyana.">
+    <meta name="keywords" content="Electrical Engineering Guyana,Electrician,Electrical,Engineering,Solar, Solar Installation Guyana, Electrician Guyana, Commercial Electrical Services, A&R Electrical">
     <meta name="robots" content="index, follow">
     <meta name="author" content="A&R Electrical Engineering Enterprise">
 
@@ -17,7 +17,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="A&R Electrical Engineering Enterprise">
-    <meta property="og:description" content="Professional electrical installations, solar energy solutions, industrial electrical services, and maintenance in Guyana.">
+    <meta property="og:description" content="Professional electrical installations, solar energy solutions, Commercial electrical services, and maintenance in Guyana.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ar-electricalgy.com/">
     <meta property="og:image" content="https://ar-electricalgy.com/images/hero.jpg">
@@ -41,9 +41,9 @@
     <header>
         <nav>
             <div class="logo-container">
-                <div class="logo">
+                <a href="index.html" class="logo" aria-label="Go to homepage">
                     ⚡ A&R Electrical Engineering Enterprise
-                </div>
+                </a>
                 <div class="slogan">
                     Empowering your future one connection at a time
                 </div>
@@ -64,7 +64,7 @@
             <h1>Powering The Future With <span>A&R Electrical Engineering</span></h1>
             <p>
                 Professional electrical engineering solutions.<br>
-                ⚡ Electrical Installation | ☀ Solar Systems | 🏭 Industrial Services
+                ⚡ Electrical Installation | ☀ Solar Systems | 🏭 Commercial Installations
             </p>
             <a class="btn" href="tel:+5926846004">
                 <i class="fa fa-phone"></i> Call Now
@@ -93,11 +93,11 @@
                     <p>Solar panel installation, backup power systems, energy saving solutions and consultations.</p>
                 </div>
             </a>
-            <a href="industrial-electrical.html" class="card-link">
+            <a href="Commercial-electrical.html" class="card-link">
                 <div class="card">
                     <i class="fa fa-industry"></i>
-                    <h3>Industrial Electrical Systems</h3>
-                    <p>Industrial wiring, control systems, automation support and electrical maintenance.</p>
+                    <h3>Commercial Electrical Systems</h3>
+                    <p>Commercial wiring, control systems, automation support and electrical maintenance.</p>
                 </div>
             </a>
             <a href="repairs-maintenance.html" class="card-link">
@@ -115,11 +115,13 @@
         <h2>About A&R Electrical Engineering Enterprise</h2>
         <div class="about">
             <div class="box">
-                <p>A&R Electrical Engineering Enterprise is a modern engineering company focused on providing safe, efficient and reliable electrical solutions.</p>
-                <br>
-                <p>We specialize in residential, commercial, industrial and renewable energy projects.</p>
-                <br>
-                <p>Our mission is to deliver quality workmanship using modern technology and professional engineering standards.</p>
+
+                
+                <p>A&R Electrical Engineering Enterprise delivers end-to-end electrical engineering services designed to meet the growing infrastructure and renewable energy demands of Guyana. Combining years of practical experience with modern engineering standards, we specialize in high-efficiency solar power setups, commercial electrical systems, emergency backup power, and complex control automation.</p>
+            </dr>
+
+
+                <p>From initial system design and load calculations to full-scale installation, troubleshooting, and 24/7 technical support, our certified team handles complex power challenges with precision. We specialize in seamless solar energy integration, energy-efficiency consultations, control systems, and routine system audits—helping our clients transition toward cleaner, more cost-effective energy solutions while guaranteeing complete operational safety and regulatory compliance.</p>
             </div>
             <div class="stats">
                 <div class="box">
@@ -178,11 +180,11 @@
                     <p>Clean energy systems designed for homes and businesses.</p>
                 </div>
             </a>
-            <a href="industrial-projects.html" class="card-link">
+            <a href="Commercial-projects.html" class="card-link">
                 <div class="card">
                     <i class="fa fa-industry"></i>
-                    <h3>Industrial Projects</h3>
-                    <p>Electrical systems for industrial and commercial applications.</p>
+                    <h3>Commercial Projects</h3>
+                    <p>Electrical systems for Residential and commercial applications.</p>
                 </div>
             </a>
         </div>
@@ -193,7 +195,7 @@
         <h2>Customer Reviews</h2>
         <div class="cards">
             <div class="card">
-                <h3>⭐⭐⭐⭐⭐</h3>
+                <h3>⭐⭐⭐⭐</h3>
                 <p>"Excellent service and professional electrical workmanship."</p>
             </div>
             <div class="card">
@@ -201,7 +203,7 @@
                 <p>"Reliable team with great attention to detail."</p>
             </div>
             <div class="card">
-                <h3>⭐⭐⭐⭐⭐</h3>
+                <h3>⭐⭐⭐⭐</h3>
                 <p>"Great experience with our electrical and solar installation."</p>
             </div>
         </div>
@@ -243,7 +245,7 @@
     <footer>
         <h3>⚡ A&R Electrical Engineering Enterprise</h3>
         <p class="footer-slogan">"Empowering your future one connection at a time"</p>
-        <p>Electrical • Solar • Industrial • Engineering</p>
+        <p>Electrical • Solar • Commercial • Engineering</p>
         <p>📞 +592 684-6004 | +592 732-6604</p>
         <p>✉ randolphcox818@gmail.com</p>
 
@@ -314,7 +316,8 @@
         const words = [
             "Electrical Engineering",
             "Solar Energy Solutions",
-            "Industrial Systems",
+            "Commercial Wiring",
+            "sytem Diagnostic",
             "Smart Power Technology"
         ];
 
@@ -348,6 +351,22 @@
         }
 
         typeEffect();
+    </script>
+
+    <script>
+        document.querySelectorAll('.logo').forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                const isHomePage = window.location.pathname.toLowerCase().endsWith('/index.html') ||
+                    window.location.pathname === '/' ||
+                    window.location.pathname.toLowerCase().endsWith('/new/') ||
+                    window.location.pathname.toLowerCase().endsWith('/new/index.html');
+
+                if (isHomePage) {
+                    event.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
     </script>
 
     <!-- Start of Tawk.to Script -->
